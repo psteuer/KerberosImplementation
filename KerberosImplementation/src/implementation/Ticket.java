@@ -1,15 +1,22 @@
 package implementation;
 
-public class Ticket {
+import java.io.Serializable;
+
+public class Ticket implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public String userId;
 	public String accessableServices;
 	public long currentTime;
 	public String controlInformation;
 
-	//Constructor
+	// Constructor
 	public Ticket() {
 		currentTime = System.currentTimeMillis();
 	}
+
 	/**
 	 * @return the userId
 	 */
@@ -68,7 +75,8 @@ public class Ticket {
 
 	@Override
 	public String toString() {
-		return "userId: " + userId + " AccessableServices: "+ accessableServices + " currentTime: " + currentTime + " controlInformation: " + controlInformation;
+		return "userId: " + userId + " AccessableServices: " + accessableServices + " currentTime: " + currentTime
+				+ " controlInformation: " + controlInformation;
 	}
 
 }
